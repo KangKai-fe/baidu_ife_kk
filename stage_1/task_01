@@ -95,7 +95,7 @@
 			</tr>
 			<tr>
 				<td>总计</td>
-				<td colspan="2">表格内容单元格</td>
+				<td colspan="2">1000</td>
 			</tr>
 		</tbody>
 	</table>
@@ -114,7 +114,7 @@
 		<p>
 			<span>性别：</span>
 			<input type="radio" name="sex" id="male" value="1" checked /><label for="male">男</label>
-			<input type="radio" name="sex" id="male" value="0" checked /><label for="male">女</label>
+			<input type="radio" name="sex" id="female" value="0" /><label for="female">女</label>
 			<span>城市：</span>
 			<select>
 				<option selected>北京</option>
