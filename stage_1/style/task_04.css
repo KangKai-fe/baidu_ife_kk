@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+body{
+	margin: 0;
+}
+.container{
+	width: 400px;
+	min-height:200px;
+	background-color: #ccc;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	-webkit-transform: translateY(-50%);
+	overflow:hidden;
+}
+.quadrant_1, .quadrant_2{
+	border: 50px solid #fc0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	width: 0;
+	height: 0;
+}
+.quadrant_1{
+	position: absolute;
+	left: -50px;
+	top: -50px;
+}
+.quadrant_2{
+	position: absolute;
+	right: -50px;
+	bottom: -50px;
+}
