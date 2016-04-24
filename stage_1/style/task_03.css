@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body, h3, p{
+	margin:0;
+	padding:0;
+	line-height: 24px;
+	font-family: "微软雅黑";
+}
+.wrapper, .team, .introduction, .teammates{
+	padding: 20px;
+	border: 1px solid #999;
+}
+.wrapper{
+	overflow: hidden;
+	min-width: 600px;
+}
+img{
+	width: 80px; height: 80px; display: block;
+}
+.wrapper{
+	margin: 20px;
+	background-color: #eee;
+}
+.team, .introduction, .teammates{
+	background-color: #fff;
+}
+.team{
+	float:left;
+	width:158px;
+}
+.team img{
+	float:left;
+	margin-right: 20px;
+}
+.introduction{
+	margin: 0 140px 0 220px;
+	text-indent: 2em;
+}
+.teammates{
+	float:right;
+}
+.teammates img{
+	margin-bottom: 20px;
+}
+.teammates img:last-child{
+	margin: 0;
+}
