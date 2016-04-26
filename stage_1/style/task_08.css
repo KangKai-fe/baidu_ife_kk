@@ -1,0 +1,166 @@
+@charset "utf-8";
+body,
+div {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.container * {
+  box-sizing: border-box;
+}
+.inner {
+  height: 50px;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+}
+.row {
+  *zoom: 1;
+}
+.row:after,
+.row:before {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-md-1,
+.col-sm-1 {
+  float: left;
+  padding: 10px;
+}
+.col-md-2,
+.col-sm-2 {
+  float: left;
+  padding: 10px;
+}
+.col-md-3,
+.col-sm-3 {
+  float: left;
+  padding: 10px;
+}
+.col-md-4,
+.col-sm-4 {
+  float: left;
+  padding: 10px;
+}
+.col-md-5,
+.col-sm-5 {
+  float: left;
+  padding: 10px;
+}
+.col-md-6,
+.col-sm-6 {
+  float: left;
+  padding: 10px;
+}
+.col-md-7,
+.col-sm-7 {
+  float: left;
+  padding: 10px;
+}
+.col-md-8,
+.col-sm-8 {
+  float: left;
+  padding: 10px;
+}
+.col-md-9,
+.col-sm-9 {
+  float: left;
+  padding: 10px;
+}
+.col-md-10,
+.col-sm-10 {
+  float: left;
+  padding: 10px;
+}
+.col-md-11,
+.col-sm-11 {
+  float: left;
+  padding: 10px;
+}
+.col-md-12,
+.col-sm-12 {
+  float: left;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}

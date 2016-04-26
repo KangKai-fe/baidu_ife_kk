@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+// 变量
+@cols_num:12;
+@col_width:100% / @cols_num;
+@col_height:50px;
+@cols_spacing:20px;
+@col_border:#999;
+@col_bg:#eee;
+
+
+
+// 公用
+.reset(){
+	padding:0;
+	margin:0;
+}
+
+.clearfix(){
+	*zoom:1;
+	&:after, &:before{
+		content:"";
+		display:table;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+
+// 重置样式表
+body, div{
+	.reset();
+}
+// 外部容器
+.container{
+	width:100%;
+	max-width: 1200px;
+	margin:20px auto;
+	// 设置盒子模型 -> 为了在cols之间保留padding
+	* {
+		box-sizing: border-box;
+	}
+}
+.inner{
+	height:@col_height;
+	background-color: @col_bg;
+	border:1px solid @col_border;
+}
+// 行
+.row{
+	.clearfix();
+}
+// 循环设置col的width
+.loop(@counter, @i:0) when(@i < @counter){
+	@c: @i + 1;
+	.col-md-@{c}, .col-sm-@{c}{
+		float:left;
+		// 盒子间的间隙
+		padding:@cols_spacing / 2;
+	}
+	.loop(@counter, @i + 1);
+}
+// 调用循环, 设置为12列
+.loop(@cols_num);
+
+// 媒体查询
+// 小型设备
+@media screen and (max-width: 768px){
+	.loop(@counter, @i:0) when(@i < @counter){
+		@c: @i + 1;
+		.col-sm-@{c}{
+			width:@c * @col_width;
+		}
+		.loop(@counter, @i + 1);
+	}
+	.loop(@cols_num);
+}
+// 中型设备
+@media screen and (min-width: 769px){
+	.loop(@counter, @i:0) when(@i < @counter){
+		@c: @i + 1;
+		.col-md-@{c}{
+			width:@c * @col_width;
+		}
+		.loop(@counter, @i + 1);
+	}
+	.loop(@cols_num);
+}
