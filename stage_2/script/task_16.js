@@ -41,20 +41,38 @@ function renderAqiList() {
       aqiTable = document.getElementById("aqi-table"),
           btns = aqiTable.getElementsByTagName("button");
 
-  tempList += "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+  // 判断aqiData非空, 再渲染table
 
-  for (var aqiCity in aqiData) {
-    tempList += "<tr><td>" + aqiCity + "</td><td>" + aqiData[aqiCity]+ "</td><td><button>删除</button></td></tr>";
+  aqiTable.innerHTML = "";
+  if (!isEmptyObject(aqiData)) {
+
+    tempList += "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+
+    for (var aqiCity in aqiData) {
+      tempList += "<tr><td>" + aqiCity + "</td><td>" + aqiData[aqiCity]+ "</td><td><button>删除</button></td></tr>";
+    }
+
+    aqiTable.innerHTML = tempList;
+
+    // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
+    for (var i = 0, len = btns.length; i < len; i++) {
+      btns[i].onclick = function() {
+        delBtnHandle.call(this);
+      };
+    }
+
   }
 
-  aqiTable.innerHTML = tempList;
+}
 
-  // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
-  for (var i = 0, len = btns.length; i < len; i++) {
-    btns[i].onclick = function() {
-      delBtnHandle.call(this);
-    };
+/**
+ * 判断object是否为空
+ */
+function isEmptyObject(obj) {
+  for (var i in obj) {
+    return false;
   }
+  return true;
 }
 
 /**
