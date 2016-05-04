@@ -11,4 +11,4 @@
 * 任务九：按照设计图，通过HTML/CSS实现一个复杂的业务系统页面 [demo](http://kangkai-fe.github.io/baidu_ife_kk/stage_1/task_09.html)
 * 任务十：学习和练习Flex布局 [demo](http://kangkai-fe.github.io/baidu_ife_kk/stage_1/task_10.html)
 * 任务十一：移动Web开发入门，按照设计稿实现一个移动端的页面 [demo](http://kangkai-fe.github.io/baidu_ife_kk/stage_1/task_11.html)
-* 任务十二：CSS 3新特性的小练习
+* 任务十二：CSS 3新特性的小练习 [demo](http://kangkai-fe.github.io/baidu_ife_kk/stage_1/task_12.html)
